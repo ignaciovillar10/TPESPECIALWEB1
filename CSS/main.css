@@ -1,4 +1,4 @@
-content {
+main {
     text-align: center;
     display: flex; /* Habilita Flexbox para los hijos directos */
     flex-direction: row; /* pone los elementos en fila*/
@@ -8,15 +8,7 @@ content {
 h1 {
     text-align: center;
 }
-.producto1 {
-    border: solid black;
-    margin: 5px;
-}
-.producto2 {
-    border: solid black;
-    margin: 5px;
-}
-.producto3 {
+.producto1,.producto2,.producto3 {
     border: solid black;
     margin: 5px;
 }
