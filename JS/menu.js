@@ -1,13 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-inicializarMenu();
-function inicializarMenu() {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-  
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("mostrar");
-      });
-    }
-  }
-});
+document.querySelector(".btn_menu").addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    document.querySelector(".navigation").classList.toggle("show");
+}

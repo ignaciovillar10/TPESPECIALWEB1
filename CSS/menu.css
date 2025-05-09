@@ -1,24 +1,71 @@
-nav {
-    background-color: white;
-}
-
-nav ul {
-    list-style: none; /*es para que no se vea los puntos de la lista*/
-    padding: 0;
-    margin: 0;
+.logo {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px;
+    background-color: gray;
+    color: white;
 }
 
-nav ul li {
-    margin: 0 15px; /*el espacio entre los elementos de la lista*/
+.btn_menu {
+    color: white;
+    padding: 15px;
 }
 
-nav ul li a {
-    color: #333; /* el color de la letra de la barra de navegacion*/
-    text-decoration: none; /*le saca el color al hipervinculo*/
+.btn_menu a{
+    color: white;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #007bff; /*se resalta de celeste cuando pasa el mouse*/
+.menu {
+    border-bottom: 4px solid gray;
+    width: 100%;
+    display: flex;
+    background-color: black; 
 }
+
+ul.navigation {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+}
+
+    /* si tiene tambien la clase show */
+    ul.navigation.show {
+        display: flex;
+    }
+
+ul.navigation li {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 15px 20px;
+}
+
+ul.navigation li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.navigation li:hover {
+    background-color: gray;
+}
+
+
+@media screen and (min-width: 660px){
+
+    /* en desktop ocultamos siempre el boton del menu */
+    .btn_menu {
+       display: none;
+    }
+
+   /* cambiamos la direccion del flex */
+    ul.navigation {
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+
