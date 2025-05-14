@@ -1,0 +1,29 @@
+.boton-modo /* Estilo del botón de modo oscuro */{
+    margin: 1rem auto;
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #160b0b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  body.light-mode /* Cambia el color de la pantalla en modo claro */{
+    background-color: #be2525;
+    color: #ffffff;
+  }
+  header.light-mode /* Cambia el color del encabezado en modo claro */{
+    background-color: #823434;
+  }
+  main.light-mode /* Cambia el color del main en modo claro */{
+    background-color: #8b5454;
+    color: #ffffff;
+  }
+/* -------- Botón Modo Oscuro  -------- */  
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #330707;
+  color: #f0f0f0;
+  line-height: 1.6;
+  padding: 1rem;
+}

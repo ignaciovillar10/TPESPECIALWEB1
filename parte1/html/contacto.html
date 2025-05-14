@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - GamerZone</title>
+  <link rel="stylesheet" href="../css/adaptacion.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/modooscuro.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/form.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">GamerZone</div>
+    <button class="menu-toggle">&#9776;</button>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Formulario de Contacto</h1>
+    <form id="form-contacto">
+      <label>Nombre:<br><input type="text" required></label><br>
+      <label>Mensaje:<br><textarea required></textarea></label><br>
+
+      <div class="captcha">
+      
+        <label for="captchaInput">Ingrese los caracteres que le aparecen: <span id="captchaTexto"></span></label>
+        <input type="text" id="captchaInput" required>
+        
+        <div id="mensajeCaptcha"></div>
+        
+      </div>
+      <div id="mensajeCaptcha" class="mensaje"></div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p> 2025 GamerZone</p>
+  </footer>
+  <script src="captha.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
