@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto - GamerZone</title>
-  <link rel="stylesheet" href="../css/adaptacion.css">
-  <link rel="stylesheet" href="../css/menu.css">
-  <link rel="stylesheet" href="../css/modooscuro.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/form.css">
-
+  <link rel="stylesheet" href="../css/adaptacion.css" />
+  <link rel="stylesheet" href="../css/menu.css" />
+  <link rel="stylesheet" href="../css/modooscuro.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/form.css" />
 </head>
 <body>
   <header>
@@ -27,27 +26,27 @@
   <main>
     <h1>Formulario de Contacto</h1>
     <form id="form-contacto">
-      <label>Nombre:<br><input type="text" required></label><br>
+      <label>Nombre:<br><input type="text" required /></label><br>
       <label>Mensaje:<br><textarea required></textarea></label><br>
 
       <div class="captcha">
-      
-        <label for="captchaInput">Ingrese los caracteres que le aparecen: <span id="captchaTexto"></span></label>
-        <input type="text" id="captchaInput" required>
-        
-        <div id="mensajeCaptcha"></div>
-        
+        <label for="captchaInput">
+          Ingrese los caracteres que le aparecen: 
+          <span id="captchaTexto"></span>
+        </label>
+        <input type="text" id="captchaInput" required />
+        <div id="mensajeCaptcha" class="mensaje"></div>
       </div>
-      <div id="mensajeCaptcha" class="mensaje"></div>
 
       <button type="submit">Enviar</button>
     </form>
   </main>
 
   <footer>
-    <p> 2025 GamerZone</p>
+    <p>2025 GamerZone</p>
   </footer>
-  <script src="captha.js"></script>
-  <script src="menu.js"></script>
+
+  <script src="../js/captha.js"></script>
+  <script src="../js/menu.js"></script>
 </body>
 </html>
