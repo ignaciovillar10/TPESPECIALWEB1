@@ -6,11 +6,6 @@
 }
 
 
-/* -------- Modo Claro/Oscuro -------- */
-.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
 
 /* -------- Encabezado -------- */
 header {
@@ -64,6 +59,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
+
 }
 
 table th, table td {
@@ -71,7 +67,12 @@ table th, table td {
   padding: 0.5rem;
   text-align: left;
 }
-
+td img {
+  max-width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 /* -------- Lista -------- */
 ul, ol {
   padding-left: 1.5rem;
@@ -82,4 +83,7 @@ ul, ol {
   height: auto;
   display: block;
   margin: 0.5rem auto;
+}
+tr td ul li {
+  text-decoration: double;
 }
