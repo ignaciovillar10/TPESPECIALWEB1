@@ -1,23 +1,4 @@
-.menu-toggle {
-  display: block;
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1000;
-}
-
-header {
-  position: relative;
-  padding-top: 3rem; /* deja espacio para el botón */
-}
-
-nav.menu {
+.menu {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -25,38 +6,51 @@ nav.menu {
   padding: 1rem;
 }
 
-nav.menu.mostrar {
+.menu.mostrar {
+  display: flex;
+}
+/* Estilo general del menú (oculto por defecto) */
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #2a2a2a;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Clase para mostrar el menú */
+.menu.mostrar {
   display: flex;
 }
 
-nav.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Botón ☰ arriba a la izquierda */
+.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-nav.menu li {
-  margin: 0.5rem 0;
-}
 
-nav.menu li a {
-  color: #cfbabf;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Para escritorio (pantallas grandes) */
 @media screen and (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  nav.menu {
+  .menu {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
   }
 
-  nav.menu li {
-    margin: 0 1rem;
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu.mostrar {
+    display: flex !important;
   }
 }

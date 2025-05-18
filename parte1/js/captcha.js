@@ -1,47 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const captchaCanvas = document.getElementById("captchaCanvas");
-  const captchaCanvasInput = document.getElementById("captchaCanvasInput");
-  const mensajeCaptchaCanvas = document.getElementById("mensajeCaptchaCanvas");
-  const form = document.getElementById("form-contacto");
+let resultadoCorrecto = 0;
 
-  let captchaCanvasTexto = "";
+function generarCaptchaMath() {
+  const canvasMath = document.getElementById("captchaCanvasMath");
+  const num1 = Math.floor(Math.random() * 9) + 1;
+  const num2 = Math.floor(Math.random() * 9) + 1;
+  const operador = ["+", "-", "*"][Math.floor(Math.random() * 3)];
+  resultadoCorrecto = eval(`${num1} ${operador} ${num2}`);
 
-  function generarCaptchaCanvas() {
-    const caracteres = "ABCDEFGHJKLMNPQRSTUVWXYZ123456789";
-    captchaCanvasTexto = "";
-    for (let i = 0; i < 6; i++) {
-      captchaCanvasTexto += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    }
+  const ctx = canvasMath.getContext("2d");
+  ctx.clearRect(0, 0, canvasMath.width, canvasMath.height);
+  ctx.fillStyle = "#eef";
+  ctx.fillRect(0, 0, canvasMath.width, canvasMath.height);
+  ctx.font = "24px sans-serif";
+  ctx.fillStyle = "#000";
+  ctx.fillText(`${num1} ${operador} ${num2} = ?`, 10, 35);
+}
 
-    const ctx = captchaCanvas.getContext("2d");
-    ctx.clearRect(0, 0, captchaCanvas.width, captchaCanvas.height);
-    ctx.fillStyle = "#f8f8f8";
-    ctx.fillRect(0, 0, captchaCanvas.width, captchaCanvas.height);
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#000";
-
-    // Agregar ruido
-    for (let i = 0; i < 20; i++) {
-      ctx.beginPath();
-      ctx.arc(Math.random() * 150, Math.random() * 50, 1 + Math.random() * 2, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    ctx.fillText(captchaCanvasTexto, 10, 35);
-  }
-
-  generarCaptchaCanvas();
-
-  form.addEventListener("submit", (e) => {
-    if (captchaCanvasInput.value.trim().toUpperCase() !== captchaCanvasTexto) {
-      mensajeCaptchaCanvas.textContent = "❌ Captcha visual incorrecto.";
-      mensajeCaptchaCanvas.style.color = "red";
-      captchaCanvasInput.value = "";
-      generarCaptchaCanvas();
-      e.preventDefault();
-    } else {
-      mensajeCaptchaCanvas.textContent = "✅ Captcha visual correcto.";
-      mensajeCaptchaCanvas.style.color = "green";
-    }
-  });
-});
+function validarCaptchaMath(input) {
+  return parseInt(input.trim()) === resultadoCorrecto;
+}
