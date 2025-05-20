@@ -1,0 +1,29 @@
+.conteiner{
+    display:  grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    background-color: red;
+}
+header{
+    grid-area: header;
+    background-color: green;
+}
+
+@media screen and (min-width: 600px) {
+    .conteiner {
+        grid-template-areas:
+            "header"
+            "main"
+            "footer""footer";
+        grid-template-columns: 1fr;
+        background-color: blue;
+    }
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+}
+ 

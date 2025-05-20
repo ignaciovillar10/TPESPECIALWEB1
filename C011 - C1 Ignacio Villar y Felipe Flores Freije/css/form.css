@@ -1,0 +1,84 @@
+form {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border: 1px solid #444;
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #777;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+form button {
+  background-color: #00ff99;
+  border: none;
+  padding: 0.7rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #00cc7a;
+}
+
+#mensajeCaptcha {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+#captchaTexto {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #131312;
+  background-color: #e4cfcf;
+  border: 1px #f5b115;
+  padding: 0.3rem 0.6rem;
+  letter-spacing: 2px;
+  font-family: monospace;
+  margin-left: 0.5rem;
+}
+.captcha {
+  margin-top: 1em;
+}
+.captcha-texto,
+.captcha-visual {
+  margin-top: 1em;
+}
+canvas {
+  border: 1px solid #ccc;
+  margin-top: 6px;
+   width:180px; 
+   height:50px;
+}
+.mensaje {
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+.captcha-visual {
+  text-align: center;
+  margin: 20px auto;
+  color: #e6f7ff; /* o el color que estás usando en tu sitio */
+}
+
+#captchaCanvas {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  width: 180px;
+  height: 50px;
+}
